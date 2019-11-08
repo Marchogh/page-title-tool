@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="test" />
+    <title>Page title tool</title>
+  </head>
+  <style>
+    html {
+      box-sizing: border-box;
+      font-family: sans-serif;
+      background: #ebebeb;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ol,
+    ul {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+
+    body {
+      padding: 1rem;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    main {
+      padding: 0.5rem 5rem 0.5rem 0.5rem;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    input {
+      background: #fff;
+      color: #a3a3a3;
+      font: inherit;
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 10px;
+      outline: 0;
+      padding: 18px;
+    }
+
+    .input-wrapper {
+      display: flex;
+    }
+
+    .length {
+      align-self: center;
+      margin-left: 5px;
+    }
+
+    .output {
+      font-size: 16px;
+      line-height: 1.33;
+      color: #1a0dab;
+      margin-top: 15px;
+    }
+
+    .url {
+      font-size: 14px;
+      color: #006621;
+      padding-top: 1px;
+    }
+
+    .meta {
+      line-height: 1.54;
+      word-wrap: break-word;
+      width: 60%;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+
+    .meta-output {
+      margin-bottom: 10px;
+    }
+
+    .current-title {
+      display: inline-block;
+      color: #444444;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .page-title {
+      display: inline-block;
+      font-size: 14px;
+      color: #444444;
+    }
+
+    .page-title::after {
+      content: "-";
+      margin-left: 5px;
+    }
+
+    .current-title-length {
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .current-title-wrapper {
+      border-top: 1px solid #d8d8d8;
+      padding-top: 10px;
+    }
+
+    .length {
+      color: #444444;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .yellow {
+      color: yellow;
+      text-shadow: #949494 0px 0px 10px;
+    }
+
+    .blue {
+      color: #1a0dab;
+    }
+  </style>
+  <body>
+    <main>
+      <div class="input-wrapper">
+        <input type="text" placeholder="Type a title" size="50" />
+        <div class="length bold">0</div>
+        <p class="length">Characters</p>
+      </div>
+      <p class="output">Page title</p>
+      <p class="url">https://example.com/your-url-goes-here</p>
+      <p class="meta-output"></p>
+      <div class="current-title-wrapper">
+        <p class="current-title">Current title:</p>
+        <div class="page-title"></div>
+        <div class="current-title-length"></div>
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
